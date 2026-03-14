@@ -388,9 +388,10 @@
       display: grid; place-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
     .ba-btn .mi { font-size: 22px; }
-    .ba-badge {
+        .ba-badge {
       position: absolute; top: 16px; padding: 6px 14px; background: rgba(9,35,74,0.8); color: #fff;
       font-size: 12px; font-weight: 700; border-radius: var(--rpill); backdrop-filter: blur(4px); letter-spacing: 1px;
+      transition: opacity 0.2s ease; /* Added this line for smooth fading */
     }
     .ba-badge.left { left: 16px; z-index: 3;}
     .ba-badge.right { right: 16px; z-index: 1;}
@@ -675,7 +676,7 @@
     </div>
     <div class="top-right">
       <a href="tel:9778521475"><span class="material-icons-round mi">phone</span> 97785 21475</a>
-      <a href="/cdn-cgi/l/email-protection#e29083868b838c9686878792818e87838c8b8c85a2858f838b8ecc818d8f"><span class="material-icons-round mi">email</span> <span class="__cf_email__" data-cfemail="a3d1c2c7cac2cdd7c7c6c6d3c0cfc6c2cdcacdc4e3c4cec2cacf8dc0ccce">[email&#160;protected]</span></a>
+      <a href="mailto:radiantdeepcleaning@gmail.com"><span class="material-icons-round mi">email</span> radiantdeepcleaning@gmail.com</a>
     </div>
   </div>
 </div>
@@ -981,7 +982,7 @@
           <div class="cicon"><span class="material-icons-round mi">email</span></div>
           <div>
             <div class="cinfo-title">Email Us</div>
-            <div class="cinfo-val"><a href="/cdn-cgi/l/email-protection#d5a7b4b1bcb4bba1b1b0b0a5b6b9b0b4bbbcbbb295b2b8b4bcb9fbb6bab8"><span class="__cf_email__" data-cfemail="522033363b333c2636373722313e37333c3b3c3512353f333b3e7c313d3f">[email&#160;protected]</span></a></div>
+            <div class="cinfo-val"><a href="mailto:radiantdeepcleaning@gmail.com">radiantdeepcleaning@gmail.com</a></div>
           </div>
         </div>
         <div class="cinfo">
@@ -1503,7 +1504,7 @@
         <a href="#pricing"><span class="material-icons-round mi" style="font-size:16px;color:var(--blue-md)">currency_rupee</span>Pricing</a>
         <a href="#faq"><span class="material-icons-round mi" style="font-size:16px;color:var(--blue-md)">help_outline</span>FAQs</a>
         <a href="#area"><span class="material-icons-round mi" style="font-size:16px;color:var(--blue-md)">map</span>Service Area</a>
-        <a href="/cdn-cgi/l/email-protection#dba9babfb2bab5afbfbebeabb8b7bebab5b2b5bc9bbcb6bab2b7f5b8b4b6"><span class="material-icons-round mi" style="font-size:16px;color:var(--blue-md)">email</span>Email Us</a>
+        <a href="mailto:radiantdeepcleaning@gmail.com"><span class="material-icons-round mi" style="font-size:16px;color:var(--blue-md)">email</span>Email Us</a>
         <a href="tel:9778521475"><span class="material-icons-round mi" style="font-size:16px;color:var(--blue-md)">phone</span>97785 21475</a>
       </div>
     </div>
@@ -1511,7 +1512,7 @@
     <hr/>
     <div class="foot-bottom">
       <div>© 2025 Radiant Deep Cleaning Services. City Tower, Iritty. All rights reserved.</div>
-      <div><a href="/cdn-cgi/l/email-protection#423023262b232c3626272732212e27232c2b2c2502252f232b2e6c212d2f" style="color:rgba(255,255,255,.4);text-decoration:none;"><span class="__cf_email__" data-cfemail="f98b989d9098978d9d9c9c899a959c989790979eb99e94989095d79a9694">[email&#160;protected]</span></a></div>
+      <div><a href="mailto:radiantdeepcleaning@gmail.com" style="color:rgba(255,255,255,.4);text-decoration:none;">radiantdeepcleaning@gmail</a></div>
     </div>
   </div>
 </footer>
@@ -1526,7 +1527,7 @@
   </a>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Language toggle
   function setLang(lang) {
     document.body.classList.toggle('lang-ml', lang === 'ml');
@@ -1607,10 +1608,17 @@
     });
   });
 
-  // Before & After Slider Logic
+    // Before & After Slider Logic
   function updateSlider(input) {
     const sliderContainer = input.parentElement;
     sliderContainer.style.setProperty('--pos', input.value + '%');
+    
+    // Hide badges when the slider line gets too close to the edges
+    const badgeLeft = sliderContainer.querySelector('.ba-badge.left');
+    const badgeRight = sliderContainer.querySelector('.ba-badge.right');
+    
+    if (badgeLeft) badgeLeft.style.opacity = input.value < 15 ? '0' : '1';
+    if (badgeRight) badgeRight.style.opacity = input.value > 85 ? '0' : '1';
   }
 
   // FAQ Accordion Logic
