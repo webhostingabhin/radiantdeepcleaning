@@ -6,7 +6,8 @@
   <!-- Local SEO Title & Meta -->
   <title>Radiant Deep Cleaning Services | Home & Office Cleaners in Kannur & North Malabar</title>
   <meta name="description" content="Professional deep cleaning services for homes and offices in Kannur, Thalassery, Kasaragod, and Iritty. We use modern equipment and safe chemicals. Book via WhatsApp today!"/>
-  
+    <link rel="icon" href="favicon.png" type="image/png"/>
+  <link rel="shortcut icon" href="logo.png" type="image/png"/>
   <!-- LocalBusiness Structured Data -->
   <script type="application/ld+json">
   {
@@ -182,7 +183,7 @@
 
     /* HERO */
     .hero { background: var(--bg-light); padding: 30px 0 50px; }
-    .hero-container { display: flex; flex-direction: column-reverse; gap: 24px; }
+    .hero-container { display: flex; flex-direction: column; gap: 24px; }
     .hero-text-block { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 10px; }
     .hero-img-wrap{
       position:relative;border-radius:var(--r);overflow:hidden;
@@ -197,8 +198,14 @@
       font-size:13px;font-weight:700;margin-bottom:20px; box-shadow: var(--s1);
     }
     .hero h1 {
-      font-family:'Google Sans',sans-serif; font-size: clamp(26px, 7vw, 36px); 
-      font-weight:700; line-height:1.3; margin-bottom:12px; color: var(--text);
+      font-family:'Google Sans',sans-serif; 
+      font-size: clamp(22px, 5.8vw, 40px); /* Adjusted to fit smaller screens */
+      font-weight:700; line-height:1.2; /* Tighter line height prevents wrapping */
+      margin-bottom:12px; color: var(--text);
+    }
+    /* Extra safeguard for very small phones like iPhone SE */
+    @media (max-width: 380px) {
+      .hero h1 { font-size: 21px; letter-spacing: -0.3px; }
     }
     .hero h1 span{color:var(--blue-dk); font-weight: 800;}
     
@@ -245,7 +252,7 @@
 
     /* ABOUT US */
     .about-layout { display: flex; flex-direction: column; gap: 24px; }
-    .about-img { border-radius: var(--r); overflow: hidden; box-shadow: var(--s2); aspect-ratio: 16/9; background: var(--white); }
+    .about-img { border-radius: var(--r); overflow: hidden; box-shadow: var(--s2); aspect-ratio: 4/3; background: var(--white); }
     .about-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .about-list { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
     .about-list-item { display: flex; align-items: center; gap: 10px; font-weight: 500; color: var(--text); font-size: 15px;}
@@ -706,7 +713,7 @@
         <div class="dropdown-menu">
           <a onclick="openModal('m1')">Interior Deep Cleaning</a>
           <a onclick="openModal('m10')">General Cleaning Services</a>
-          <a onclick="openModal('m5')">Pressure Washing</a>
+          <a onclick="openModal('m5')">Interlock Pressure Washing</a>
           <a onclick="openModal('m2')">Sofa & Carpet Cleaning</a>
           <a onclick="openModal('m4')">Post-Construction Clean</a>
           <a onclick="openModal('m9')">Grass Cutting</a>
@@ -776,9 +783,9 @@
       <h1>Bringing Shine, Hygiene &amp; Freshness <span>to Every Space</span></h1>
       <p class="hero-motto">Clean Spaces. Happy Homes.</p>
       
-      <p class="hero-sub">
-        <span class="en">Professional deep cleaning for homes and offices using modern equipment and trained staff. We ensure your space is spotless and completely hygienic.</span>
-        <span class="ml-text">കണ്ണൂർ, തലശ്ശേരി, കാസർഗോഡ് എന്നിവിടങ്ങളിൽ റേഡിയന്റ് ഡീപ് ക്ലീനിംഗ് മികച്ച സേവനങ്ങൾ നൽകുന്നു. അത്യാധുനിക ഉപകരണങ്ങൾ ഉപയോഗിച്ച് ഞങ്ങൾ നിങ്ങളുടെ വീട് പൂർണ്ണമായും വൃത്തിയാക്കുന്നു.</span>
+       <p class="hero-sub">
+        <span class="en">Experience top-rated <strong>professional deep cleaning services</strong> for homes and commercial spaces across Kannur, Wayanad, and Kasaragod. Our trained experts use advanced industrial equipment and eco-friendly products to easily eliminate stubborn dirt, stains, and allergens. We guarantee a spotless, 100% hygienic environment.</span>
+        <span class="ml-text">കണ്ണൂർ, വയനാട്, കാസർഗോഡ് ജില്ലകളിലെ വീടുകൾക്കും വാണിജ്യ സ്ഥാപനങ്ങൾക്കും റേഡിയന്റ് മികച്ച <strong>പ്രൊഫഷണൽ ഡീപ് ക്ലീനിംഗ്</strong> നൽകുന്നു. അത്യാധുനിക മെഷീനുകളും ഇക്കോ-ഫ്രണ്ട്‌ലി ലോഷനുകളും ഉപയോഗിച്ച് കഠിനമായ അഴുക്കും നീക്കം ചെയ്ത് 100% ശുചിത്വം ഞങ്ങൾ ഉറപ്പുനൽകുന്നു.</span>
       </p>
       <div class="hero-btns">
         <a href="tel:9778521475" class="btn-primary">
@@ -807,8 +814,8 @@
         <div class="chip-label">Who We Are</div>
         <h2>About Radiant Deep Cleaning</h2>
         <p class="sec-desc" style="margin-bottom: 20px;">
-          <span class="en">Radiant Deep Cleaning provides professional cleaning services for homes, offices, and commercial spaces across North Malabar. Our trained team uses modern equipment and safe cleaning solutions to deliver reliable and hygienic cleaning services.</span>
-          <span class="ml-text">റേഡിയന്റ് ഡീപ് ക്ലീനിംഗ് നോർത്ത് മലബാറിലെ വീടുകൾക്കും ഓഫീസുകൾക്കും കൊമേഴ്‌സ്യൽ സ്ഥാപനങ്ങൾക്കും പ്രൊഫഷണൽ ക്ലീനിംഗ് സേവനങ്ങൾ നൽകുന്നു. ഞങ്ങളുടെ പരിശീലനം ലഭിച്ച ടീം ആധുനിക ഉപകരണങ്ങളും സുരക്ഷിതമായ ലോഷനുകളും ഉപയോഗിച്ച് മികച്ച സേവനം ഉറപ്പാക്കുന്നു.</span>
+          <span class="en">At <strong>Radiant Deep Cleaning Services</strong>, we believe a clean environment is the foundation of a healthy, happy life. Based in North Malabar, we are a fully registered and insured agency dedicated to transforming homes, villas, and commercial spaces into pristine environments.<br><br>Our company-trained professionals utilize industrial-grade machinery and family-safe, eco-friendly solutions to tackle the toughest stains, dust, and grime. Whether it’s an intensive post-construction move-in clean, specialized sofa shampooing, or routine sanitization, we pride ourselves on punctuality, complete transparency, and a 100% satisfaction guarantee. Trust our experts to bring the shine back to your space.</span>
+          <span class="ml-text"><strong>റേഡിയന്റ് ഡീപ് ക്ലീനിംഗ് സർവീസസ്</strong> നോർത്ത് മലബാറിലെ വീടുകൾക്കും വാണിജ്യ സ്ഥാപനങ്ങൾക്കും വേണ്ടി പ്രത്യേകം രൂപകൽപ്പന ചെയ്ത മികച്ച സേവനങ്ങൾ നൽകുന്നു. ഒരു സർക്കാർ അംഗീകൃത സ്ഥാപനം എന്ന നിലയിൽ, ഉപഭോക്താക്കളുടെ വിശ്വാസവും ആരോഗ്യവുമാണ് ഞങ്ങളുടെ മുൻഗണന.<br><br>തികഞ്ഞ പ്രൊഫഷണലിസത്തോടെ, കമ്പനി നേരിട്ട് പരിശീലനം നൽകിയ ഞങ്ങളുടെ ജോലിക്കാർ അത്യാധുനിക മെഷീനുകളും സുരക്ഷിതമായ ലോഷനുകളും ഉപയോഗിച്ച് ഏത് കഠിനമായ അഴുക്കും നീക്കം ചെയ്യുന്നു. പുതിയ വീട്ടിലേക്കുള്ള ഗൃഹപ്രവേശ ക്ലീനിംഗ്, സോഫാ ഷാംപൂവിങ്, ഇന്റർലോക്ക് വാഷിങ് എന്നിങ്ങനെ എല്ലാവിധ ആവശ്യങ്ങൾക്കും യാതൊരു ഹിഡൻ ചാർജുകളുമില്ലാതെ ഞങ്ങൾ സേവനം നൽകുന്നു. 100% ശുചിത്വവും നിങ്ങളുടെ പൂർണ്ണ സംതൃപ്തിയുമാണ് ഞങ്ങളുടെ ലക്ഷ്യം.</span>
         </p>
         <div class="about-list">
           <div class="about-list-item"><span class="material-icons-round mi">verified</span> <span class="en">Registered & Fully Insured LLP</span><span class="ml-text">സർക്കാർ അംഗീകൃത LLP സ്ഥാപനം</span></div>
@@ -945,9 +952,9 @@
             <option value="">Select a service...</option>
             <option value="Interior Deep Clean">Interior Deep Clean</option>
             <option value="General Cleaning Services">General Cleaning Services</option>
-            <option value="Pressure Washing">Pressure Washing</option>
+            <option value="Interlock & Pressure Washing">Interlock & Pressure Washing</option>
             <option value="Sofa & Carpet Shampooing">Sofa & Carpet Cleaning</option>
-            <option value="Pest Control Services">Pest Control Services</option>
+            
             <option value="Post-Construction Clean">Post-Construction Clean</option>
             <option value="Grass Cutting">Grass Cutting</option>
             <option value="Kitchen & Work Area">Kitchen Deep Cleaning</option>
@@ -1880,27 +1887,7 @@
   </div>
 </div>
 
-<!-- M8: Pest Control -->
-<div class="modal-backdrop" id="m8" data-modal-id="m8">
-  <div class="modal">
-    <button class="modal-close" onclick="_dismissModal('m8')"><span class="material-icons-round mi">close</span></button>
-    <img class="modal-img" src="svc-pest.webp" alt="Pest Control Services" onerror="this.src='https://placehold.co/550x220/1090AA/FFFFFF?text=Pest+Control'"/>
-    <div class="modal-body">
-      <span class="modal-tag">Safe Solutions</span>
-      <div class="modal-title"><span class="en">Pest Control Services</span><span class="ml-text">പെസ്റ്റ് കൺട്രോൾ സേവനം</span></div>
-      <p class="modal-desc"><span class="en">Effective and family-safe pest control for cockroaches, ants, rodents, termites, and other pests — using government-approved chemicals.</span><span class="ml-text">കരിയാൻ, ഉറുമ്പ്, എലി, ടർമൈറ്റ് തുടങ്ങിയ കീടങ്ങൾക്ക് ഫലപ്രദമായ, കുടുംബ-സുരക്ഷിതമായ ചികിത്സ.</span></p>
-      <div class="modal-features">
-        <div class="modal-feat"><span class="material-icons-round mi">check_circle</span><span class="en">Cockroach & ant treatment</span><span class="ml-text">കരിയാൻ & ഉറുമ്പ് ചികിത്സ</span></div>
-        <div class="modal-feat"><span class="material-icons-round mi">check_circle</span><span class="en">Termite protection treatment</span><span class="ml-text">ടർമൈറ്റ് പ്രൊട്ടക്ഷൻ ട്രീറ്റ്‌മെന്‍റ്</span></div>
-        <div class="modal-feat"><span class="material-icons-round mi">check_circle</span><span class="en">Safe for children & pets</span><span class="ml-text">കുട്ടികൾക്കും വളർത്തു മൃഗങ്ങൾക്കും സുരക്ഷിതം</span></div>
-      </div>
-      <div class="modal-actions">
-        <a href="https://wa.me/919778521475?text=Hi%20Radiant!%20I%20need%20Pest%20Control%20Services." target="_blank" class="btn-wa"><svg viewBox="0 0 24 24" width="22" height="22" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.857L.057 23.486a.75.75 0 00.917.972l5.85-1.53A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.022-1.379l-.36-.214-3.724.975.993-3.63-.234-.373A9.818 9.818 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.42-4.398 9.818-9.818 9.818z"/></svg><span class="en">Book via WhatsApp</span><span class="ml-text">വാട്സ്ആപ്പ് ബുക്കിങ്</span></a>
-        <a href="tel:9778521475" class="btn-call-solid"><span class="material-icons-round mi">phone</span><span class="en">Call for Booking</span><span class="ml-text">ഇപ്പോൾ വിളിക്കൂ</span></a>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <!-- M9: Grass Cutting -->
 <div class="modal-backdrop" id="m9" data-modal-id="m9">
